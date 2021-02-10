@@ -68,7 +68,6 @@ MODULES = [
     'voting',
 ]
 
-BASEURL = 'http://localhost:8000'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -144,7 +143,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+BASEURL="https://egc-carsantir-examen2.herokuapp.com"
+APIS={}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
@@ -160,3 +160,5 @@ except ImportError:
 
 
 INSTALLED_APPS = INSTALLED_APPS + MODULES
+import django_heroku
+django_heroku.settings(locals())
